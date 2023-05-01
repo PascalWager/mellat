@@ -1,16 +1,22 @@
+/*
+IRAN Sans-serif fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (NYQ34HOW)
+--------------------------------------------------------------------------------------
+*/
 @font-face {
-  font-family: inter;
-  src: url("fonts/Inter-Regular.woff") format("woff");
+  font-family: pelak;
+  src: url("fonts/Pelak-Regular.woff") format("woff");
   font-style: normal;
 }
 @font-face {
-  font-family: inter;
-  src: url("fonts/Inter-Italic.woff") format("woff");
+  font-family: pelaklight;
+  src: url("fonts/Pelak-light.woff") format("woff");
   font-style: italic;
 }
 @font-face {
-  font-family: interbold;
-  src: url("fonts/Inter-Bold.woff") format("woff");
+  font-family: pelakbold;
+  src: url("fonts/Pelak-Bold.woff") format("woff");
   font-style: normal;
 }
 :root {
@@ -36,7 +42,7 @@ body {
   align-items: center;
   justify-content: space-between;
   font-size: var(--btnsize);
-  font-family: interbold;
+  font-family: pelakbold;
   position: fixed;
   width: 80vw;
   left: 10vw;
@@ -62,7 +68,7 @@ body {
   font-size: var(--btnsize);
   border: var(--color3) solid 1px;
   border-radius: 2rem;
-  font-family: interbold;
+  font-family: pelakbold;
   color: #ed1651;
   margin: 0 0.5rem 0 0.5rem;
 }
@@ -75,21 +81,31 @@ body {
   color: var(--color2);
 }
 .sec1pan {
-  position: absolute;
-  left: 20vw;
   font-size: 9rem;
-  font-family: interbold;
-  top: 30vh;
+  font-family: pelakbold;
+  grid-column: 3;
+  grid-row: 8/9;
+  white-space: nowrap;
+}
+.sec1pan2 {
+  font-size: 9rem;
+  font-family: pelakbold;
+  grid-column: 3;
+  padding-right: 20rem;
+  grid-row: 9/10;
+  white-space: nowrap;
 }
 .sec1p {
-  position: absolute;
-  left: 18vw;
   font-size: 2.5rem;
-  font-family: inter;
-  top: 60vh;
+  font-family: pelak;
+  grid-column: 3/5;
+  grid-row: 10;
+  padding-right: 20rem;
+  padding-top: 22rem;
 }
 #sec1back {
   position: absolute;
+  z-index: -1;
   right: 5vw;
   width: 30vw;
   height: 40vh;
@@ -97,19 +113,17 @@ body {
   background-color: var(--color1);
 }
 #sec2back {
-  position: absolute;
-  right: 10vw;
-  width: 40vw;
-  height: 60vh;
+  width: 44vw;
+  grid-column: 1/3;
+  grid-row: 1/9;
   background-color: #0072bc;
-  top: 100vh;
+  margin-right: 0.5rem;
+  padding-top: 15rem;
 }
 #sec3back {
-  position: absolute;
-  width: 100vw;
-  height: 60vh;
   background-color: var(--color3);
-  top: 200vh;
+  grid-column: 1/11;
+  grid-row: 1/8;
 }
 #sec4back {
   position: absolute;
@@ -132,39 +146,58 @@ body {
   top: 410vh;
 }
 #blackbtn {
-  position: absolute;
   background: black;
-  padding: 0.7rem 4rem 0.7rem 4rem;
   font-size: var(--btnsize);
   border: none;
-  border-radius: 2rem;
-  font-family: interbold;
+  border-radius: 3rem;
+  font-family: pelakbold;
   color: white;
-  margin: 0 0.5rem 0 0.5rem;
-  left: 10vw;
-  top: 70vh;
+  width: 10vw;
+  height: 5vh;
+  float: left;
+}
+#blackdiv {
+  grid-column: 3/4;
+  grid-row: 10;
+  /* padding-right: 20rem; */
+  padding-top: 30rem;
 }
 .sec2pan {
-  position: absolute;
-  right: 12vw;
-  font-size: 8.5rem;
-  font-family: inter;
-  top: 115vh;
+  font-size: 1.8rem;
+  font-family: pelaklight;
+  padding: 1rem;
+  padding-top: 5rem;
   color: white;
 }
-.sec3pan {
-  position: absolute;
-  right: 35vw;
-  font-size: 9rem;
-  font-family: interbold;
-  top: 202vh;
+.sec2pan2 {
+  font-size: 7rem;
+  font-family: pelak;
+  padding: 1rem;
+  padding-top: 5rem;
   color: white;
+  white-space: nowrap;
+}
+.sec3pan {
+  font-size: 9rem;
+  font-family: pelakbold;
+  color: #ffffff;
+  grid-column: 5;
+  /* padding-right: 5rem; */
+  white-space: nowrap;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+.sec3pan3 {
+  font-family: pelakbold;
+  grid-column: 6/9;
+  grid-row: 8;
+  margin-top: 10rem;
 }
 .sec4pan {
   position: absolute;
   right: 50vw;
   font-size: 11rem;
-  font-family: interbold;
+  font-family: pelakbold;
   top: 330vh;
   color: white;
   width: 40vw;
@@ -173,25 +206,37 @@ body {
   position: absolute;
   right: 45vw;
   font-size: 11rem;
-  font-family: interbold;
+  font-family: pelakbold;
   top: 420vh;
   color: white;
   width: 40vw;
 }
-.sec3p {
-  position: absolute;
-  font-size: 1.8rem;
-  font-family: inter;
-  top: 220vh;
-  width: 35vw;
-  right: 55vw;
-  color: white;
+.sec3p.inactive {
+  display: none;
+  transition: all 0.5s;
 }
+.sec3p.active {
+  font-size: 1.8rem;
+  font-family: pelak;
+  color: white;
+  grid-row: 2/6;
+  grid-column: 6/10;
+  transition: all 1s;
+  animation: mamad;
+}
+@keyframes mamad {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .things {
-  position: absolute;
-  right: 8vw;
-  top: 170vh;
   display: flex;
+  grid-column: 1/4;
+  grid-row: 8;
 }
 .icons {
   background: white;
@@ -208,10 +253,10 @@ body {
   font-size: 1.5rem;
 }
 .circles {
-  position: absolute;
-  right: 55vw;
-  top: 250vh;
   display: flex;
+  grid-row: 7;
+  grid-column: 6;
+  margin-top: 20rem;
 }
 .circle {
   background-color: white;
@@ -220,12 +265,15 @@ body {
   height: 1vw;
   margin: 1rem;
 }
+.circle.active {
+  background-color: black;
+}
 .images {
   position: absolute;
   right: 15vw;
   display: flex;
   /* font-size: 11rem;
-    font-family: interbold; */
+    font-family: pelakbold; */
   top: 440vh;
   /* color: white;
     width: 40vw; */
@@ -235,7 +283,7 @@ body {
   right: 15vw;
   display: flex;
   /* font-size: 11rem;
-      font-family: interbold; */
+      font-family: pelakbold; */
   top: 500vh;
   /* color: white;
       width: 40vw; */
@@ -245,7 +293,7 @@ body {
 }
 .imgdis {
   font-size: 1.5rem;
-  font-family: interbold;
+  font-family: pelakbold;
   /* margin: 1rem; */
 }
 .imgc img:hover {
@@ -270,14 +318,14 @@ body {
 }
 .boldlink {
   font-size: 2rem;
-  font-family: interbold;
+  font-family: pelakbold;
   margin-bottom: 2rem;
   text-decoration: none;
   color: black;
 }
 .slink {
   font-size: 1.3rem;
-  font-family: inter;
+  font-family: pelak;
   margin-bottom: 0.5rem;
 
   text-decoration: none;
@@ -296,4 +344,29 @@ body {
 #logo2 {
   float: left;
   width: 50%;
+}
+.section1back {
+  height: 100vh;
+  display: grid !important;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.section2 {
+  height: 100vh;
+  display: grid !important;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.section3 {
+  height: 100vh;
+  display: grid !important;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+#bulb1 {
+  grid-column: 5;
+  /* float: left; */
+  padding-right: 33rem;
+  padding-top: 2rem;
+  grid-row: 8;
 }
